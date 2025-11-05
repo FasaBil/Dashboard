@@ -1,0 +1,116 @@
+.sidebar-nav {
+  width: 256px;
+  background-color: #ffffff;
+  border-right: 1px solid var(--moa-pink-100);
+  padding: 24px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+.sidebar-nav-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--moa-pink-600);
+  margin-bottom: 32px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--grey-600);
+  transition: all 0.2s ease;
+}
+
+.nav-item a:hover {
+  background-color: var(--moa-pink-100);
+  color: var(--moa-pink-600);
+}
+
+.nav-item a.active {
+  background-color: var(--moa-pink-100);
+  color: var(--moa-pink-600);
+  font-weight: 600;
+}
+
+.nav-section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--grey-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+
+.playlist-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.playlist-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--grey-500);
+  transition: color 0.2s ease;
+}
+
+.playlist-list a:hover {
+  color: var(--moa-pink-500);
+}
+
+/* Mobile Sidebar */
+.sidebar-nav.mobile {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  transform: translateX(-100%);
+}
+
+.sidebar-nav.mobile.open {
+  transform: translateX(0);
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 40;
+}
+
+.close-sidebar-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--grey-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.close-sidebar-btn:hover {
+  color: var(--moa-pink-500);
+}
+
+@media (max-width: 1024px) {
+  .sidebar-nav:not(.mobile) {
+    display: none;
+  }
+}

@@ -1,0 +1,125 @@
+:root {
+  --moa-pink-50: #fff1f2;
+  --moa-pink-100: #ffe4e6;
+  --moa-pink-200: #fecdd3;
+  --moa-pink-300: #fda4af;
+  --moa-pink-400: #fb7185;
+  --moa-pink-500: #f43f5e;
+  --moa-pink-600: #e11d48;
+  --moa-pink-800: #9f1239;
+  
+  --moa-blue-100: #e0f2fe;
+  --moa-blue-500: #0ea5e9;
+
+  --grey-100: #f3f4f6;
+  --grey-400: #9ca3af;
+  --grey-500: #6b7280;
+  --grey-600: #4b5563;
+  --grey-700: #374151;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--moa-pink-50);
+  color: var(--moa-pink-800);
+  overflow: hidden;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--moa-pink-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--moa-pink-300);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--moa-pink-400);
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content-area {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--moa-pink-600);
+}
+
+#no-results {
+  text-align: center;
+  color: var(--grey-500);
+  margin-top: 40px;
+}
+
+#no-results .no-results-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  color: var(--moa-pink-200);
+}
+
+#no-results h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#no-results p {
+  font-size: 0.875rem;
+}
+
+.genre-pop { background-color: var(--moa-pink-100); color: var(--moa-pink-600); }
+.genre-rock { background-color: var(--grey-100); color: var(--grey-700); }
+.genre-r-b { background-color: #ede9fe; color: #7c3aed; }
+.genre-ballad { background-color: var(--moa-blue-100); color: var(--moa-blue-500); }
+.genre-afro-pop { background-color: #fef3c7; color: #b45309; }
+.genre-default { background-color: var(--grey-100); color: var(--grey-500); }
